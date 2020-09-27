@@ -1,16 +1,24 @@
 image: harbor.repo.admxj.cn/library/mvn-jdk8:jdk8-3.6.3-v1.0
 
-default-job:
+# 定义 stages
+stages:
+  - test
+  - build
+
+
+test:
+  stage: test
   script:
     - mvn test -U
-  except:
-    - tags
+  tags:
+    - maven-node
 
 release-job:
+  stage: build
   script:
     - mvn package -U
   artifacts:
     paths:
       - target/*.war
-  only:
-    - tags
+  tags:
+    - maven-node
