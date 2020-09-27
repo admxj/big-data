@@ -1,4 +1,4 @@
-image: harbor.repo.admxj.cn/library/mvn-jdk8:jdk8-3.6.3-v1.0
+image: harbor.repo.admxj.cn/library/mvn-jdk8:jdk8-3.6.3-v1.3
 
 # 定义 stages
 stages:
