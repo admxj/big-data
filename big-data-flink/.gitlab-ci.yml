@@ -1,3 +1,5 @@
+image: harbor.repo.admxj.cn/library/mvn-jdk8:jdk8-3.6.3-v1.0
+
 default-job:
   script:
     - mvn test -U
